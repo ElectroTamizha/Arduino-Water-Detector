@@ -1,0 +1,24 @@
+//ELECTRO TAMIZHA
+int waterSensor = A0;//define water sensor to pin A0
+int buzzerled = 5;//define buzzer and led to pin 5
+int SensorValue;//create sensor data variable
+
+void setup() {
+  
+
+pinMode(buzzerled,OUTPUT);//set buzzer and led as an output
+pinMode(waterSensor,INPUT); //set water sensor as an input         
+    
+}
+
+void loop() {
+ 
+  int sensorValue = analogRead(waterSensor);//read the water sensor value
+if (sensorValue >= 150) {
+      tone(buzzerled, 1000, 800);
+      delay(200);
+      tone(buzzerled, 1000, 800);
+ }
+}
+
+ 
